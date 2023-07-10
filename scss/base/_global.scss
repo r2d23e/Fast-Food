@@ -1,0 +1,37 @@
+.btn{
+    background-color: $orange;
+    padding: 15px 37px;
+    border-radius: 5px;
+    @include font(16px, 500, $white, uppercase, center);
+    transition: .2s background ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        background-color: #db5f18;
+    }
+    &:active{
+        transform: translateY(1px);
+    }
+}
+
+.container{
+    max-width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+p{
+    opacity: .5;
+    @include font(16px, 400, $white, none, auto);
+}
+
+.price {
+    @include font(20px, 500, $orange, none, auto);
+    margin: 13px 0 11px;
+}
+.price-span {
+    @include font(16px, 500, $orange, none, auto);
+    text-decoration: line-through;
+    opacity: .5;
+}

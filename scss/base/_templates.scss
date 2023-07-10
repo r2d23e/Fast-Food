@@ -1,0 +1,20 @@
+@mixin flex($jc, $ai, $gap) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+}
+
+@mixin font($fz,$fw,$cl,$tt,$ta) {
+    font-size: $fz;
+    font-weight: $fw;
+    color: $cl;
+    text-transform: $tt;
+    text-align: $ta;
+}
+
+%bgImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

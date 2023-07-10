@@ -1,0 +1,261 @@
+//Base
+@import "./base/reset";
+@import "./base/templates";
+@import "./base/vars";
+@import "./base/fonts";
+@import "./base/global";
+@import "./base/keyframes";
+
+body {
+    background-color: $bodyColor;
+}
+
+//Blocks
+//Header
+.header {
+    padding: 0 20px;
+    background-image: url(./../img/header/header-bg.png);
+    @extend %bgImg;
+}
+
+.container {
+    .header__top {
+        @include flex(space-between, center, 0);
+
+        .nav {
+
+            .header__menu {
+                @include flex(unset, center, 28px);
+            }
+
+            .header__menu-link {
+                @include font(14px, 400, $white, uppercase, center);
+            }
+        }
+    }
+
+    .header__content {
+        max-width: 555px;
+        padding: 175px 0 190px;
+
+        .header__content-title {
+            @include font(14px, 400, $white, uppercase, start);
+        }
+
+        .header__content-heading {
+            @include font(58px, 700, $white, none, start);
+        }
+
+        .header__content-subtitle {
+            margin: 37px 0 42px;
+            max-width: 523px;
+            @include font(18px, 400, $white, none, start);
+        }
+    }
+}
+
+//Meals
+.meals {
+    padding: 125px 0 100px;
+    max-width: 1142px;
+    margin: 0 auto;
+    @include flex(space-between, center, 0);
+
+    .meal__card {
+        max-width: 263px;
+        height: 323px;
+        background-color: $darkGray;
+        border-radius: 10px;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        .meal__card-img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .meal__card-text {
+            padding: 28px 20px 30px;
+        }
+
+        .meal__card-title {
+            @include font(20px, 500, $white, none, center);
+            margin-bottom: 13px;
+        }
+
+        .meal__card-subtitle {
+            text-align: center;
+        }
+    }
+}
+
+//Burger-King
+.burger-king {
+    .container {
+        @include flex(space-between, center, 0);
+
+        .burger-king__text {
+            max-width: 368px;
+        }
+
+        .burger-king__title {
+            @include font(44.2px, 500, $white, none, auto)
+        }
+
+        .burger-king__subtitle {
+            margin-top: 24px;
+        }
+    }
+}
+
+//Menu
+.menu {
+    padding: 150px 0;
+
+    .container {
+        @include flex(unset, center, 30px);
+        flex-wrap: wrap;
+
+        .menu__card {
+            position: relative;
+            width: 555px;
+            height: 300px;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                scale: 1.03
+            }
+
+            .menu__card-title {
+                @include font(30px, 500, $white, none, auto);
+            }
+
+            .menu__card-subtitle {
+                margin-top: 20px;
+            }
+
+            .price {
+                margin: 11px 0;
+            }
+        }
+
+        #menu__card-1 {
+            background-image: url(./../img/menu/menu-1.png);
+        }
+
+        #menu__card-2 {
+            background-image: url(./../img/menu/menu-2.png);
+            @extend %bgImg;
+        }
+
+        #menu__card-3 {
+            background-image: url(./../img/menu/menu-3.png);
+        }
+
+        #menu__card-4 {
+            background-image: url(./../img/menu/menu-4.png);
+            @extend %bgImg;
+        }
+
+        #menu__card-1,
+        #menu__card-3 {
+            @extend %bgImg;
+
+            .menu__card-text {
+                position: absolute;
+                right: 30px;
+                top: 63px;
+                bottom: 63px;
+            }
+        }
+
+        #menu__card-2,
+        #menu__card-4 {
+            @extend %bgImg;
+
+            .menu__card-text {
+                position: absolute;
+                left: 50px;
+                top: 63px;
+                bottom: 63px;
+            }
+        }
+    }
+}
+
+//Feedback
+.feedback {
+    max-width: 850px;
+    @include flex(space-between, center, 0);
+    margin: 0 auto;
+    padding-bottom: 195px;
+
+    .feedback__text {
+        max-width: 369px;
+        @include flex(center, center, 0);
+        flex-direction: column;
+    }
+
+    p {
+        text-align: center;
+        margin: 37px 0 27px;
+    }
+
+    h4 {
+        @include font(24px, 500, $white, none, auto);
+    }
+
+    h6 {
+        @include font(12px, 500, $white, none, auto);
+    }
+}
+
+//Download
+.download {
+    background-color: $darkGray;
+
+    .container {
+        @include flex(space-between, center, 0);
+        padding: 62px 0;
+
+        h2 {
+            @include font(40px, 500, $white, none, auto);
+        }
+    }
+}
+
+//Footer
+.footer {
+    padding: 125px 0 140px;
+
+    .container {
+        @include flex(space-between, center, 0);
+
+        .footer__part {
+            h4 {
+                @include font(16px, 500, $white, none, auto);
+            }
+
+            a {
+                display: block;
+                @include font(12px, 400, $white, none, auto);
+                margin-top: 15px;
+            }
+        }
+
+        .social__imgs {
+            @include flex(unset, center, 10px)
+        }
+    }
+}
+
+.fromLeft{
+    animation: fromLeft 1 1.5s;
+}
+
+.fromRight{
+    animation: fromRight 1 1.5s;
+}

@@ -1,0 +1,443 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu .container #menu__card-1,
+.menu .container #menu__card-3, .menu .container #menu__card-4, .menu .container #menu__card-2, .header {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.btn {
+  background-color: #F6762C;
+  padding: 15px 37px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.2s background ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.btn:hover {
+  background-color: #db5f18;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+
+.container {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+p {
+  opacity: 0.5;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #F6762C;
+  text-transform: none;
+  text-align: auto;
+  margin: 13px 0 11px;
+}
+
+.price-span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #F6762C;
+  text-transform: none;
+  text-align: auto;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+body {
+  background-color: #1C1C1C;
+}
+
+.header {
+  padding: 0 20px;
+  background-image: url(./../img/header/header-bg.png);
+}
+
+.container .header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.container .header__top .nav .header__menu {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: 28px;
+}
+.container .header__top .nav .header__menu-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container .header__content {
+  max-width: 555px;
+  padding: 175px 0 190px;
+}
+.container .header__content .header__content-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: start;
+}
+.container .header__content .header__content-heading {
+  font-size: 58px;
+  font-weight: 700;
+  color: #FFF;
+  text-transform: none;
+  text-align: start;
+}
+.container .header__content .header__content-subtitle {
+  margin: 37px 0 42px;
+  max-width: 523px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: none;
+  text-align: start;
+}
+
+.meals {
+  padding: 125px 0 100px;
+  max-width: 1142px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.meals .meal__card {
+  max-width: 263px;
+  height: 323px;
+  background-color: #312F30;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.meals .meal__card:hover {
+  scale: 1.1;
+}
+.meals .meal__card .meal__card-img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.meals .meal__card .meal__card-text {
+  padding: 28px 20px 30px;
+}
+.meals .meal__card .meal__card-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: none;
+  text-align: center;
+  margin-bottom: 13px;
+}
+.meals .meal__card .meal__card-subtitle {
+  text-align: center;
+}
+
+.burger-king .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.burger-king .container .burger-king__text {
+  max-width: 368px;
+}
+.burger-king .container .burger-king__title {
+  font-size: 44.2px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+}
+.burger-king .container .burger-king__subtitle {
+  margin-top: 24px;
+}
+
+.menu {
+  padding: 150px 0;
+}
+.menu .container {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.menu .container .menu__card {
+  position: relative;
+  width: 555px;
+  height: 300px;
+  transition: 0.3s ease-in-out;
+}
+.menu .container .menu__card:hover {
+  scale: 1.03;
+}
+.menu .container .menu__card .menu__card-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+}
+.menu .container .menu__card .menu__card-subtitle {
+  margin-top: 20px;
+}
+.menu .container .menu__card .price {
+  margin: 11px 0;
+}
+.menu .container #menu__card-1 {
+  background-image: url(./../img/menu/menu-1.png);
+}
+.menu .container #menu__card-2 {
+  background-image: url(./../img/menu/menu-2.png);
+}
+.menu .container #menu__card-3 {
+  background-image: url(./../img/menu/menu-3.png);
+}
+.menu .container #menu__card-4 {
+  background-image: url(./../img/menu/menu-4.png);
+}
+.menu .container #menu__card-1 .menu__card-text,
+.menu .container #menu__card-3 .menu__card-text {
+  position: absolute;
+  right: 30px;
+  top: 63px;
+  bottom: 63px;
+}
+.menu .container #menu__card-2 .menu__card-text,
+.menu .container #menu__card-4 .menu__card-text {
+  position: absolute;
+  left: 50px;
+  top: 63px;
+  bottom: 63px;
+}
+
+.feedback {
+  max-width: 850px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin: 0 auto;
+  padding-bottom: 195px;
+}
+.feedback .feedback__text {
+  max-width: 369px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+}
+.feedback p {
+  text-align: center;
+  margin: 37px 0 27px;
+}
+.feedback h4 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+}
+.feedback h6 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+}
+
+.download {
+  background-color: #312F30;
+}
+.download .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 62px 0;
+}
+.download .container h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+}
+
+.footer {
+  padding: 125px 0 140px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.footer .container .footer__part h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+}
+.footer .container .footer__part a {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #FFF;
+  text-transform: none;
+  text-align: auto;
+  margin-top: 15px;
+}
+.footer .container .social__imgs {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: 10px;
+}
+
+.fromLeft {
+  animation: fromLeft 1 1.5s;
+}
+
+.fromRight {
+  animation: fromRight 1 1.5s;
+}
