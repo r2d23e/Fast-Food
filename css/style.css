@@ -112,6 +112,7 @@ html {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .btn:hover {
@@ -155,9 +156,30 @@ p {
   opacity: 0.5;
 }
 
+@-webkit-keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes fromLeft {
   0% {
     transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fromRight {
+  0% {
+    transform: translateX(100px);
     opacity: 0;
   }
   100% {
@@ -189,6 +211,12 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0;
+}
+.container .header__top .nav a {
+  transition: color ease 0.3s;
+}
+.container .header__top .nav a:focus {
+  color: #F6762C;
 }
 .container .header__top .nav .header__menu {
   display: flex;
@@ -435,9 +463,11 @@ body {
 }
 
 .fromLeft {
-  animation: fromLeft 1 1.5s;
+  -webkit-animation: fromLeft 1 1.5s;
+          animation: fromLeft 1 1.5s;
 }
 
 .fromRight {
-  animation: fromRight 1 1.5s;
+  -webkit-animation: fromRight 1 1.5s;
+          animation: fromRight 1 1.5s;
 }

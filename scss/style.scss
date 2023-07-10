@@ -23,6 +23,13 @@ body {
         @include flex(space-between, center, 0);
 
         .nav {
+            a{
+                transition: color ease .3s;
+            }
+
+            a:focus{
+                color: $orange;
+            }
 
             .header__menu {
                 @include flex(unset, center, 28px);
